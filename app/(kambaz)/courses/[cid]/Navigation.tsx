@@ -1,39 +1,85 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function CourseNavigation() {
+  const pathname = usePathname();
+
   return (
-    <div id="wd-courses-navigation">
-      <Link href="/courses/1234/home" id="wd-course-home-link">
+    <div id="wd-courses-navigation" className="wd list-group fs-5 rounded-0">
+      <Link
+        href="/courses/1234/home"
+        id="wd-course-home-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/home" ? "active" : "text-danger"
+        }`}
+      >
         Home
       </Link>
-      <br />
-      <Link href="/courses/1234/modules" id="wd-course-modules-link">
+      <Link
+        href="/courses/1234/modules"
+        id="wd-course-modules-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/modules" ? "active" : "text-danger"
+        }`}
+      >
         Modules
       </Link>
-      <br />
-      <Link href="/courses/1234/piazza" id="wd-course-piazza-link">
+      <Link
+        href="/courses/1234/piazza"
+        id="wd-course-piazza-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/piazza" ? "active" : "text-danger"
+        }`}
+      >
         Piazza
       </Link>
-      <br />
-      <Link href="/courses/1234/zoom" id="wd-course-zoom-link">
+      <Link
+        href="/courses/1234/zoom"
+        id="wd-course-zoom-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/zoom" ? "active" : "text-danger"
+        }`}
+      >
         Zoom
       </Link>
-      <br />
-      <Link href="/courses/1234/assignments" id="wd-course-assignments-link">
+      <Link
+        href="/courses/1234/assignments"
+        id="wd-course-assignments-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/assignments" ? "active" : "text-danger"
+        }`}
+      >
         Assignments
       </Link>
-      <br />
-      <Link href="/courses/1234/quizzes" id="wd-course-quizzes-link">
+      <Link
+        href="/courses/1234/quizzes"
+        id="wd-course-quizzes-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/quizzes" ? "active" : "text-danger"
+        }`}
+      >
         Quizzes
       </Link>
-      <br />
-      <Link href="/courses/1234/grades" id="wd-course-grades-link">
+      <Link
+        href="/courses/1234/grades"
+        id="wd-course-grades-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/grades" ? "active" : "text-danger"
+        }`}
+      >
         Grades
       </Link>
-      <br />
-      <Link href="/courses/1234/people/table" id="wd-course-people-link">
+      <Link
+        href="/courses/1234/people/table"
+        id="wd-course-people-link"
+        className={`list-group-item border-0 ${
+          pathname === "/courses/1234/people/table" ? "active" : "text-danger"
+        }`}
+      >
         People
       </Link>
-      <br />
     </div>
   );
 }

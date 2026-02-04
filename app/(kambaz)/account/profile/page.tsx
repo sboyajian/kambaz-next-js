@@ -1,40 +1,62 @@
 import Link from "next/link";
+
 export default function Profile() {
   return (
-    <div id="wd-profile-screen">
-      <h3>Profile</h3>
-      <input
-        defaultValue="alice"
-        placeholder="username"
-        className="wd-username"
-      />
-      <br />
-      <input
-        defaultValue="123"
-        placeholder="password"
-        type="password"
-        className="wd-password"
-      />
-      <br />
-      <input defaultValue="Alice" placeholder="First Name" id="wd-firstname" />
-      <br />
-      <input
-        defaultValue="Wonderland"
-        placeholder="Last Name"
-        id="wd-lastname"
-      />
-      <br />
-      <input defaultValue="2000-01-01" type="date" id="wd-dob" />
-      <br />
-      <input defaultValue="alice@wonderland" type="email" id="wd-email" />
-      <br />
-      <select defaultValue="FACULTY" id="wd-role">
-        <option value="USER">User</option> <option value="ADMIN">Admin</option>
-        <option value="FACULTY">Faculty</option>{" "}
-        <option value="STUDENT">Student</option>
-      </select>
-      <br />
-      <Link href="/account/signin"> Sign out </Link>
+    <div className="d-flex mt-5">
+      <div id="wd-profile-screen" className="mb-2" style={{ width: "320px" }}>
+        <h3 className="mb-3">Profile</h3>
+        <input
+          id="wd-username"
+          placeholder="alice"
+          className="form-control mb-2"
+        />
+
+        <input
+          defaultValue="123"
+          placeholder="password"
+          type="password"
+          className="form-control mb-3"
+        />
+
+        <input
+          id="wd-firstname"
+          placeholder="Alice"
+          className="form-control mb-2"
+        />
+
+        <input
+          id="wd-lastname"
+          placeholder="Wonderland"
+          className="form-control mb-2"
+        />
+
+        <input
+          id="wd-date"
+          placeholder="2000-01-01"
+          type="date"
+          className="form-control mb-2"
+        />
+
+        <input
+          id="wd-email"
+          placeholder="alice@wonderland.com"
+          className="form-control mb-2"
+        />
+
+        <input id="wd-user" placeholder="User" className="form-control mb-2" />
+
+        <Link
+          id="wd-profile-btn"
+          href="/account/profile"
+          className="btn btn-tertiary w-100 mb-2"
+        >
+          Signout
+        </Link>
+
+        <Link id="wd-signup-link" href="/account/signin">
+          Signin
+        </Link>
+      </div>
     </div>
   );
 }
