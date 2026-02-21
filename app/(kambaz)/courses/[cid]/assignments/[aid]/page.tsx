@@ -1,15 +1,26 @@
+"use client";
+import { useParams } from "next/navigation";
+import * as db from "../../../../database";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Link from "next/link";
 
 export default function AssignmentEditor() {
+  const { cid, aid } = useParams();
+  const assignment = db.assignments.find((a: any) => a._id === aid);
+
   return (
     <div id="wd-assignments-editor" className="p-4">
       <Form>
         <div className="mb-3">
           <Form.Label htmlFor="wd-name">Assignment Name</Form.Label>
-          <Form.Control type="text" id="wd-name" defaultValue="A1" />
+          <Form.Control
+            type="text"
+            id="wd-name"
+            defaultValue={assignment?.title ?? ""}
+          />
         </div>
 
         <div className="mb-3">
@@ -17,17 +28,7 @@ export default function AssignmentEditor() {
             as="textarea"
             rows={10}
             id="wd-description"
-            defaultValue="The assignment is available online
-
-Submit a link to the landing page of your Web application running on Netlify.
-
-The landing page should include the following:
-- Your full name and section
-- Links to each of the lab assignments
-- Link to the Kanbas application
-- Links to all relevant source code repositories
-
-The Kanbas application should include a link to navigate back to the landing page."
+            defaultValue={assignment?.description ?? ""}
           />
         </div>
 
@@ -36,7 +37,11 @@ The Kanbas application should include a link to navigate back to the landing pag
             <Form.Label htmlFor="wd-points">Points</Form.Label>
           </Col>
           <Col md={9}>
-            <Form.Control type="number" id="wd-points" defaultValue={100} />
+            <Form.Control
+              type="number"
+              id="wd-points"
+              defaultValue={assignment?.points ?? 100}
+            />
           </Col>
         </Row>
 
@@ -85,7 +90,6 @@ The Kanbas application should include a link to navigate back to the landing pag
               <Form.Label className="fw-bold mb-2">
                 Online Entry Options
               </Form.Label>
-
               <Form.Check
                 type="checkbox"
                 id="wd-text-entry"
@@ -143,7 +147,11 @@ The Kanbas application should include a link to navigate back to the landing pag
               <Form.Control
                 type="datetime-local"
                 id="wd-due-date"
-                defaultValue="2024-05-13T23:59"
+                defaultValue={
+                  assignment?.dueDate
+                    ? `${assignment.dueDate}T23:59`
+                    : "2024-05-13T23:59"
+                }
                 className="mb-3"
               />
 
@@ -155,7 +163,11 @@ The Kanbas application should include a link to navigate back to the landing pag
                   <Form.Control
                     type="datetime-local"
                     id="wd-available-from"
-                    defaultValue="2024-05-06T12:00"
+                    defaultValue={
+                      assignment?.availableDate
+                        ? `${assignment.availableDate}T12:00`
+                        : "2024-05-06T12:00"
+                    }
                   />
                 </Col>
                 <Col md={6}>
@@ -165,7 +177,11 @@ The Kanbas application should include a link to navigate back to the landing pag
                   <Form.Control
                     type="datetime-local"
                     id="wd-until"
-                    defaultValue="2024-05-20T23:59"
+                    defaultValue={
+                      assignment?.dueDate
+                        ? `${assignment.dueDate}T23:59`
+                        : "2024-05-20T23:59"
+                    }
                   />
                 </Col>
               </Row>
@@ -176,12 +192,16 @@ The Kanbas application should include a link to navigate back to the landing pag
         <hr />
 
         <div className="d-flex justify-content-end gap-2">
-          <Button variant="secondary" id="wd-cancel">
-            Cancel
-          </Button>
-          <Button variant="danger" id="wd-save">
-            Save
-          </Button>
+          <Link href={`/courses/${cid}/assignments`}>
+            <Button variant="secondary" id="wd-cancel">
+              Cancel
+            </Button>
+          </Link>
+          <Link href={`/courses/${cid}/assignments`}>
+            <Button variant="danger" id="wd-save">
+              Save
+            </Button>
+          </Link>
         </div>
       </Form>
     </div>

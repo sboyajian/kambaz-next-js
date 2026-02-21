@@ -1,0 +1,90 @@
+[
+  {
+    "_id": "1234",
+    "name": "React JS",
+    "number": "CS1234",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Full Stack software developer",
+    "image": "/images/reactjs.jpg"
+  },
+  {
+    "_id": "3424",
+    "name": "Religion and Politics",
+    "number": "POLS3424",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Political Science",
+    "credits": 3,
+    "description": "Religion and Politics",
+    "image": "/images/politicsreligion.jpg"
+  },
+  {
+    "_id": "2500",
+    "name": "Fundies 1",
+    "number": "CS2500",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Fundies 1",
+    "image": "/images/computerfundamentals.jpg"
+  },
+  {
+    "_id": "2501",
+    "name": "Fundies 1 Lab",
+    "number": "CS2501",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 1,
+    "description": "Fundies 1 Lab",
+    "image": "/images/computerfundamentals.jpg"
+  },
+  {
+    "_id": "1000",
+    "name": "Calculus 1",
+    "number": "MATH1000",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Mathematics",
+    "credits": 4,
+    "description": "Calc 1",
+    "image": "/images/calc.jpg"
+  },
+  {
+    "_id": "2000",
+    "name": "Calculus 2",
+    "number": "MATH2000",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Mathematics",
+    "credits": 4,
+    "description": "Calc 2",
+    "image": "/images/calc.jpg"
+  },
+  {
+    "_id": "3400",
+    "name": "International Relations",
+    "number": "POLS3400",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Political Science",
+    "credits": 3,
+    "description": "International Relations",
+    "image": "/images/intl.jpg"
+  },
+  {
+    "_id": "2600",
+    "name": "Database Design",
+    "number": "CS2600",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "department": "Computer Science",
+    "credits": 3,
+    "description": "Database Design",
+    "image": "/images/database.jpg"
+  }
+]

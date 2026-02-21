@@ -1,3 +1,5 @@
+"use client";
+import { useParams } from "next/navigation";
 import { ListGroup, ListGroupItem } from "react-bootstrap";
 import { BsGripVertical } from "react-icons/bs";
 import { LuNotebookPen } from "react-icons/lu";
@@ -6,8 +8,12 @@ import { IoSearchOutline } from "react-icons/io5";
 import LessonControlButtons from "../modules/LessonControlButtons";
 import ModuleControlButtons from "../modules/ModuleControlButtons";
 import Link from "next/link";
+import * as db from "../../../database";
 
 export default function Assignments() {
+  const { cid } = useParams();
+  const assignments = db.assignments.filter((a: any) => a.course === cid);
+
   return (
     <div id="wd-assignments">
       <div className="d-flex justify-content-between align-items-center mb-3">
@@ -51,89 +57,50 @@ export default function Assignments() {
           </div>
 
           <ListGroup className="rounded-0">
-            <ListGroupItem
-              className="wd-assignment-list-item p-3 ps-1"
-              style={{ borderLeft: "5px solid green" }}
-            >
-              <div className="d-flex align-items-start">
-                <BsGripVertical className="me-2 fs-3" />
-                <LuNotebookPen className="me-3 fs-5 text-success" />
-                <div className="flex-grow-1">
-                  <Link
-                    href="/courses/1234/assignments/123"
-                    className="wd-assignment-link text-dark fw-bold text-decoration-none"
-                  >
-                    A1
-                  </Link>
-                  <div className="text-danger small">Multiple Modules</div>
-                  <div className="small">
-                    <span className="text-muted">Not available until</span> May
-                    6 at 12:00am
+            {assignments.map((assignment: any) => (
+              <ListGroupItem
+                key={assignment._id}
+                className="wd-assignment-list-item p-3 ps-1"
+                style={{ borderLeft: "5px solid green" }}
+              >
+                <div className="d-flex align-items-start">
+                  <BsGripVertical className="me-2 fs-3" />
+                  <LuNotebookPen className="me-3 fs-5 text-success" />
+                  <div className="flex-grow-1">
+                    <Link
+                      href={`/courses/${cid}/assignments/${assignment._id}`}
+                      className="wd-assignment-link text-dark fw-bold text-decoration-none"
+                    >
+                      {assignment.title}
+                    </Link>
+                    <div className="text-danger small">Multiple Modules</div>
+                    <div className="small">
+                      <span className="text-muted">Not available until</span>{" "}
+                      {new Date(assignment.availableDate).toLocaleDateString(
+                        "en-US",
+                        {
+                          month: "short",
+                          day: "numeric",
+                        },
+                      )}{" "}
+                      at 12:00am
+                    </div>
+                    <div className="small">
+                      <span className="text-muted">Due</span>{" "}
+                      {new Date(assignment.dueDate).toLocaleDateString(
+                        "en-US",
+                        {
+                          month: "short",
+                          day: "numeric",
+                        },
+                      )}{" "}
+                      at 11:59pm | {assignment.points} pts
+                    </div>
                   </div>
-                  <div className="small">
-                    <span className="text-muted">Due</span> May 13 at 11:59pm |
-                    100 pts
-                  </div>
+                  <LessonControlButtons />
                 </div>
-                <LessonControlButtons />
-              </div>
-            </ListGroupItem>
-
-            <ListGroupItem
-              className="wd-assignment-list-item p-3 ps-1"
-              style={{ borderLeft: "5px solid green" }}
-            >
-              <div className="d-flex align-items-start">
-                <BsGripVertical className="me-2 fs-3" />
-                <LuNotebookPen className="me-3 fs-5 text-success" />
-                <div className="flex-grow-1">
-                  <Link
-                    href="/courses/1234/assignments/124"
-                    className="wd-assignment-link text-dark fw-bold text-decoration-none"
-                  >
-                    A2
-                  </Link>
-                  <div className="text-danger small">Multiple Modules</div>
-                  <div className="small">
-                    <span className="text-muted">Not available until</span> May
-                    13 at 12:00am
-                  </div>
-                  <div className="small">
-                    <span className="text-muted">Due</span> May 20 at 11:59pm |
-                    100 pts
-                  </div>
-                </div>
-                <LessonControlButtons />
-              </div>
-            </ListGroupItem>
-
-            <ListGroupItem
-              className="wd-assignment-list-item p-3 ps-1"
-              style={{ borderLeft: "5px solid green" }}
-            >
-              <div className="d-flex align-items-start">
-                <BsGripVertical className="me-2 fs-3" />
-                <LuNotebookPen className="me-3 fs-5 text-success" />
-                <div className="flex-grow-1">
-                  <Link
-                    href="/courses/1234/assignments/125"
-                    className="wd-assignment-link text-dark fw-bold text-decoration-none"
-                  >
-                    A3
-                  </Link>
-                  <div className="text-danger small">Multiple Modules</div>
-                  <div className="small">
-                    <span className="text-muted">Not available until</span> May
-                    20 at 12:00am
-                  </div>
-                  <div className="small">
-                    <span className="text-muted">Due</span> May 27 at 11:59pm |
-                    100 pts
-                  </div>
-                </div>
-                <LessonControlButtons />
-              </div>
-            </ListGroupItem>
+              </ListGroupItem>
+            ))}
           </ListGroup>
         </ListGroupItem>
       </ListGroup>

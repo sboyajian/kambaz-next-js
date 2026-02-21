@@ -1,0 +1,225 @@
+[
+  {
+    "_id": "A12341",
+    "title": "React Component Library",
+    "description": "Build a reusable component library using React and document each component.",
+    "course": "1234",
+    "points": 100,
+    "dueDate": "2023-02-15",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A12342",
+    "title": "State Management App",
+    "description": "Create a multi-page app demonstrating useState, useEffect, and prop drilling.",
+    "course": "1234",
+    "points": 150,
+    "dueDate": "2023-03-10",
+    "availableDate": "2023-02-20"
+  },
+  {
+    "_id": "A12343",
+    "title": "Full Stack Capstone",
+    "description": "Build and deploy a full stack app with a React frontend and REST API backend.",
+    "course": "1234",
+    "points": 200,
+    "dueDate": "2023-05-01",
+    "availableDate": "2023-04-01"
+  },
+
+  {
+    "_id": "A34241",
+    "title": "Secularism Essay",
+    "description": "Write a 5-page essay comparing secular and theocratic governance models.",
+    "course": "3424",
+    "points": 100,
+    "dueDate": "2023-02-15",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A34242",
+    "title": "Religious Nationalism Case Study",
+    "description": "Analyze a modern example of religious nationalism and its political impact.",
+    "course": "3424",
+    "points": 120,
+    "dueDate": "2023-03-20",
+    "availableDate": "2023-03-01"
+  },
+  {
+    "_id": "A34243",
+    "title": "Religion and Conflict Research Paper",
+    "description": "Research paper examining the role of religion in a historical or ongoing conflict.",
+    "course": "3424",
+    "points": 150,
+    "dueDate": "2023-05-01",
+    "availableDate": "2023-04-01"
+  },
+
+  {
+    "_id": "A25001",
+    "title": "Function Design Recipe",
+    "description": "Write 10 functions using the full design recipe including purpose, examples, and tests.",
+    "course": "2500",
+    "points": 80,
+    "dueDate": "2023-02-10",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A25002",
+    "title": "Recursive Data Structures",
+    "description": "Implement recursive functions over lists and trees with full test coverage.",
+    "course": "2500",
+    "points": 100,
+    "dueDate": "2023-03-15",
+    "availableDate": "2023-03-01"
+  },
+  {
+    "_id": "A25003",
+    "title": "Final Project: Functional Program",
+    "description": "Design and implement a complete program solving a real-world problem using functional principles.",
+    "course": "2500",
+    "points": 200,
+    "dueDate": "2023-05-10",
+    "availableDate": "2023-04-10"
+  },
+
+  {
+    "_id": "A25011",
+    "title": "Lab 1: Writing Functions",
+    "description": "Complete guided lab exercises writing and testing simple functions.",
+    "course": "2501",
+    "points": 50,
+    "dueDate": "2023-02-03",
+    "availableDate": "2023-01-27"
+  },
+  {
+    "_id": "A25012",
+    "title": "Lab 2: Recursive Lists",
+    "description": "Complete lab exercises implementing recursive functions over lists.",
+    "course": "2501",
+    "points": 50,
+    "dueDate": "2023-03-10",
+    "availableDate": "2023-03-03"
+  },
+  {
+    "_id": "A25013",
+    "title": "Lab 3: Peer Code Review",
+    "description": "Review a partner's recursive tree implementation and submit written feedback.",
+    "course": "2501",
+    "points": 50,
+    "dueDate": "2023-04-07",
+    "availableDate": "2023-03-31"
+  },
+
+  {
+    "_id": "A10001",
+    "title": "Limits Problem Set",
+    "description": "Solve 20 problems evaluating limits algebraically and graphically.",
+    "course": "1000",
+    "points": 100,
+    "dueDate": "2023-02-10",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A10002",
+    "title": "Derivatives Worksheet",
+    "description": "Apply differentiation rules to 25 functions including chain and product rule problems.",
+    "course": "1000",
+    "points": 100,
+    "dueDate": "2023-03-17",
+    "availableDate": "2023-03-03"
+  },
+  {
+    "_id": "A10003",
+    "title": "Integration and FTC Exam Prep",
+    "description": "Complete a problem set covering antiderivatives, definite integrals, and the Fundamental Theorem.",
+    "course": "1000",
+    "points": 120,
+    "dueDate": "2023-05-05",
+    "availableDate": "2023-04-21"
+  },
+
+  {
+    "_id": "A20001",
+    "title": "Integration Techniques Problem Set",
+    "description": "Solve problems using integration by parts, trig integrals, and partial fractions.",
+    "course": "2000",
+    "points": 100,
+    "dueDate": "2023-02-17",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A20002",
+    "title": "Series Convergence Assignment",
+    "description": "Determine convergence or divergence of 15 series using appropriate tests.",
+    "course": "2000",
+    "points": 100,
+    "dueDate": "2023-03-24",
+    "availableDate": "2023-03-10"
+  },
+  {
+    "_id": "A20003",
+    "title": "Parametric and Polar Project",
+    "description": "Graph and analyze parametric curves and polar equations, computing area where applicable.",
+    "course": "2000",
+    "points": 120,
+    "dueDate": "2023-05-05",
+    "availableDate": "2023-04-21"
+  },
+
+  {
+    "_id": "A34001",
+    "title": "IR Theory Comparison Essay",
+    "description": "Compare realism and liberalism in explaining a specific international event.",
+    "course": "3400",
+    "points": 100,
+    "dueDate": "2023-02-17",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A34002",
+    "title": "UN Resolution Analysis",
+    "description": "Analyze a UN Security Council resolution and evaluate its effectiveness.",
+    "course": "3400",
+    "points": 120,
+    "dueDate": "2023-03-24",
+    "availableDate": "2023-03-10"
+  },
+  {
+    "_id": "A34003",
+    "title": "Global Conflict Case Study",
+    "description": "Research paper on the causes and resolution attempts of a modern international conflict.",
+    "course": "3400",
+    "points": 150,
+    "dueDate": "2023-05-05",
+    "availableDate": "2023-04-21"
+  },
+
+  {
+    "_id": "A26001",
+    "title": "SQL Query Assignment",
+    "description": "Write 15 SQL queries covering SELECT, JOIN, and aggregation on a provided database.",
+    "course": "2600",
+    "points": 100,
+    "dueDate": "2023-02-17",
+    "availableDate": "2023-01-10"
+  },
+  {
+    "_id": "A26002",
+    "title": "ER Diagram and Normalization",
+    "description": "Design an ER diagram for a given scenario and normalize it to 3NF.",
+    "course": "2600",
+    "points": 120,
+    "dueDate": "2023-03-24",
+    "availableDate": "2023-03-10"
+  },
+  {
+    "_id": "A26003",
+    "title": "Database Design Capstone",
+    "description": "Design, implement, and query a relational database for a real-world application.",
+    "course": "2600",
+    "points": 200,
+    "dueDate": "2023-05-05",
+    "availableDate": "2023-04-21"
+  }
+]

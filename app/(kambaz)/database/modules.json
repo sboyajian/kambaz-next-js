@@ -1,0 +1,273 @@
+[
+  {
+    "_id": "M1234-1",
+    "name": "Introduction to React",
+    "description": "Overview of React fundamentals and component-based architecture.",
+    "course": "1234",
+    "lessons": [
+      { "_id": "L1234-101", "name": "What is React?", "description": "History and purpose of React.", "module": "M1234-1" },
+      { "_id": "L1234-102", "name": "JSX Syntax", "description": "Understanding JSX and how it compiles.", "module": "M1234-1" },
+      { "_id": "L1234-103", "name": "Your First Component", "description": "Building and rendering a basic React component.", "module": "M1234-1" }
+    ]
+  },
+  {
+    "_id": "M1234-2",
+    "name": "State and Props",
+    "description": "Managing data flow in React applications.",
+    "course": "1234",
+    "lessons": [
+      { "_id": "L1234-201", "name": "useState Hook", "description": "Managing local component state.", "module": "M1234-2" },
+      { "_id": "L1234-202", "name": "Passing Props", "description": "How to pass data between components.", "module": "M1234-2" },
+      { "_id": "L1234-203", "name": "Lifting State Up", "description": "Sharing state between sibling components.", "module": "M1234-2" }
+    ]
+  },
+  {
+    "_id": "M1234-3",
+    "name": "Full Stack Integration",
+    "description": "Connecting React frontends to backend APIs.",
+    "course": "1234",
+    "lessons": [
+      { "_id": "L1234-301", "name": "Fetching Data", "description": "Using useEffect and fetch to call APIs.", "module": "M1234-3" },
+      { "_id": "L1234-302", "name": "REST APIs", "description": "Understanding RESTful API design.", "module": "M1234-3" },
+      { "_id": "L1234-303", "name": "Deploying Full Stack Apps", "description": "Deploying React and Node apps to the cloud.", "module": "M1234-3" }
+    ]
+  },
+
+  {
+    "_id": "M3424-1",
+    "name": "Religion in the Public Sphere",
+    "description": "Exploring the role of religion in shaping political discourse.",
+    "course": "3424",
+    "lessons": [
+      { "_id": "L3424-101", "name": "Secularism vs. Theocracy", "description": "Comparing secular and religious governance models.", "module": "M3424-1" },
+      { "_id": "L3424-102", "name": "Religion and Democracy", "description": "How religious values interact with democratic principles.", "module": "M3424-1" },
+      { "_id": "L3424-103", "name": "Case Study: The United States", "description": "Separation of church and state in American politics.", "module": "M3424-1" }
+    ]
+  },
+  {
+    "_id": "M3424-2",
+    "name": "Religious Nationalism",
+    "description": "The rise of religious nationalist movements worldwide.",
+    "course": "3424",
+    "lessons": [
+      { "_id": "L3424-201", "name": "Defining Religious Nationalism", "description": "Origins and characteristics of religious nationalism.", "module": "M3424-2" },
+      { "_id": "L3424-202", "name": "Case Study: India", "description": "Hindutva and the BJP in modern Indian politics.", "module": "M3424-2" },
+      { "_id": "L3424-203", "name": "Case Study: Iran", "description": "The Islamic Revolution and its political legacy.", "module": "M3424-2" }
+    ]
+  },
+  {
+    "_id": "M3424-3",
+    "name": "Religion, War, and Peace",
+    "description": "The influence of religion on conflict and diplomacy.",
+    "course": "3424",
+    "lessons": [
+      { "_id": "L3424-301", "name": "Holy Wars and Just War Theory", "description": "Religious justifications for armed conflict.", "module": "M3424-3" },
+      { "_id": "L3424-302", "name": "Religion and Peacebuilding", "description": "How religious institutions contribute to conflict resolution.", "module": "M3424-3" },
+      { "_id": "L3424-303", "name": "Interfaith Diplomacy", "description": "The role of interfaith dialogue in international relations.", "module": "M3424-3" }
+    ]
+  },
+
+  {
+    "_id": "M2500-1",
+    "name": "Introduction to Programming",
+    "description": "Core programming concepts using a functional language.",
+    "course": "2500",
+    "lessons": [
+      { "_id": "L2500-101", "name": "What is a Program?", "description": "Understanding computation and problem solving.", "module": "M2500-1" },
+      { "_id": "L2500-102", "name": "Expressions and Values", "description": "Evaluating expressions and understanding types.", "module": "M2500-1" },
+      { "_id": "L2500-103", "name": "Defining Functions", "description": "Writing and applying functions.", "module": "M2500-1" }
+    ]
+  },
+  {
+    "_id": "M2500-2",
+    "name": "Data and Structures",
+    "description": "Working with structured and recursive data.",
+    "course": "2500",
+    "lessons": [
+      { "_id": "L2500-201", "name": "Lists and Recursion", "description": "Defining recursive functions over lists.", "module": "M2500-2" },
+      { "_id": "L2500-202", "name": "Structs", "description": "Defining and using compound data structures.", "module": "M2500-2" },
+      { "_id": "L2500-203", "name": "Trees", "description": "Recursive tree structures and traversal.", "module": "M2500-2" }
+    ]
+  },
+  {
+    "_id": "M2500-3",
+    "name": "Design Recipe",
+    "description": "Systematic approach to writing correct programs.",
+    "course": "2500",
+    "lessons": [
+      { "_id": "L2500-301", "name": "Purpose Statements", "description": "Writing clear function purpose statements.", "module": "M2500-3" },
+      { "_id": "L2500-302", "name": "Test Cases", "description": "Designing examples and test cases before coding.", "module": "M2500-3" },
+      { "_id": "L2500-303", "name": "Templates", "description": "Using data definitions to drive function templates.", "module": "M2500-3" }
+    ]
+  },
+
+  {
+    "_id": "M2501-1",
+    "name": "Lab Setup and Tooling",
+    "description": "Getting started with the lab environment and tools.",
+    "course": "2501",
+    "lessons": [
+      { "_id": "L2501-101", "name": "Installing DrRacket", "description": "Setting up the development environment.", "module": "M2501-1" },
+      { "_id": "L2501-102", "name": "Running Your First Program", "description": "Writing and running a simple program in the lab.", "module": "M2501-1" },
+      { "_id": "L2501-103", "name": "Submitting Lab Work", "description": "How to submit assignments through the course portal.", "module": "M2501-1" }
+    ]
+  },
+  {
+    "_id": "M2501-2",
+    "name": "Guided Practice: Functions",
+    "description": "Hands-on lab exercises for writing and testing functions.",
+    "course": "2501",
+    "lessons": [
+      { "_id": "L2501-201", "name": "Lab: Writing Functions", "description": "Practice writing simple functions with the design recipe.", "module": "M2501-2" },
+      { "_id": "L2501-202", "name": "Lab: Debugging", "description": "Identifying and fixing errors in given programs.", "module": "M2501-2" },
+      { "_id": "L2501-203", "name": "Lab: Peer Review", "description": "Reviewing and giving feedback on a partner's code.", "module": "M2501-2" }
+    ]
+  },
+  {
+    "_id": "M2501-3",
+    "name": "Guided Practice: Recursion",
+    "description": "Lab exercises focused on recursive data and functions.",
+    "course": "2501",
+    "lessons": [
+      { "_id": "L2501-301", "name": "Lab: Recursive Lists", "description": "Writing recursive functions over lists.", "module": "M2501-3" },
+      { "_id": "L2501-302", "name": "Lab: Recursive Trees", "description": "Traversing and building tree structures.", "module": "M2501-3" },
+      { "_id": "L2501-303", "name": "Lab: Final Review", "description": "Cumulative practice problems for the semester.", "module": "M2501-3" }
+    ]
+  },
+
+  {
+    "_id": "M1000-1",
+    "name": "Limits and Continuity",
+    "description": "Foundations of calculus through limits and continuous functions.",
+    "course": "1000",
+    "lessons": [
+      { "_id": "L1000-101", "name": "Introduction to Limits", "description": "Understanding the concept of a limit intuitively and formally.", "module": "M1000-1" },
+      { "_id": "L1000-102", "name": "Limit Laws", "description": "Applying algebraic rules to evaluate limits.", "module": "M1000-1" },
+      { "_id": "L1000-103", "name": "Continuity", "description": "Defining and identifying continuous functions.", "module": "M1000-1" }
+    ]
+  },
+  {
+    "_id": "M1000-2",
+    "name": "Derivatives",
+    "description": "Understanding and computing derivatives.",
+    "course": "1000",
+    "lessons": [
+      { "_id": "L1000-201", "name": "Definition of the Derivative", "description": "Deriving the derivative from first principles.", "module": "M1000-2" },
+      { "_id": "L1000-202", "name": "Differentiation Rules", "description": "Power, product, quotient, and chain rules.", "module": "M1000-2" },
+      { "_id": "L1000-203", "name": "Applications of Derivatives", "description": "Using derivatives to find maxima, minima, and rates of change.", "module": "M1000-2" }
+    ]
+  },
+  {
+    "_id": "M1000-3",
+    "name": "Integrals",
+    "description": "Introduction to integration and the Fundamental Theorem of Calculus.",
+    "course": "1000",
+    "lessons": [
+      { "_id": "L1000-301", "name": "Antiderivatives", "description": "Reversing differentiation to find antiderivatives.", "module": "M1000-3" },
+      { "_id": "L1000-302", "name": "Definite Integrals", "description": "Computing area under a curve using Riemann sums.", "module": "M1000-3" },
+      { "_id": "L1000-303", "name": "Fundamental Theorem of Calculus", "description": "Connecting differentiation and integration.", "module": "M1000-3" }
+    ]
+  },
+
+  {
+    "_id": "M2000-1",
+    "name": "Integration Techniques",
+    "description": "Advanced methods for evaluating integrals.",
+    "course": "2000",
+    "lessons": [
+      { "_id": "L2000-101", "name": "Integration by Parts", "description": "Applying the integration by parts formula.", "module": "M2000-1" },
+      { "_id": "L2000-102", "name": "Trigonometric Integrals", "description": "Evaluating integrals involving trig functions.", "module": "M2000-1" },
+      { "_id": "L2000-103", "name": "Partial Fractions", "description": "Decomposing rational functions for integration.", "module": "M2000-1" }
+    ]
+  },
+  {
+    "_id": "M2000-2",
+    "name": "Sequences and Series",
+    "description": "Convergence and divergence of infinite sequences and series.",
+    "course": "2000",
+    "lessons": [
+      { "_id": "L2000-201", "name": "Sequences", "description": "Defining and analyzing convergent sequences.", "module": "M2000-2" },
+      { "_id": "L2000-202", "name": "Series and Convergence Tests", "description": "Applying ratio, root, and comparison tests.", "module": "M2000-2" },
+      { "_id": "L2000-203", "name": "Power Series", "description": "Representing functions as power series.", "module": "M2000-2" }
+    ]
+  },
+  {
+    "_id": "M2000-3",
+    "name": "Parametric and Polar Equations",
+    "description": "Representing curves beyond Cartesian coordinates.",
+    "course": "2000",
+    "lessons": [
+      { "_id": "L2000-301", "name": "Parametric Curves", "description": "Graphing and differentiating parametric equations.", "module": "M2000-3" },
+      { "_id": "L2000-302", "name": "Polar Coordinates", "description": "Converting between polar and Cartesian forms.", "module": "M2000-3" },
+      { "_id": "L2000-303", "name": "Area in Polar Coordinates", "description": "Computing area enclosed by polar curves.", "module": "M2000-3" }
+    ]
+  },
+
+  {
+    "_id": "M3400-1",
+    "name": "Foundations of International Relations",
+    "description": "Core theories and frameworks in IR.",
+    "course": "3400",
+    "lessons": [
+      { "_id": "L3400-101", "name": "Realism", "description": "Power, anarchy, and state-centric IR theory.", "module": "M3400-1" },
+      { "_id": "L3400-102", "name": "Liberalism", "description": "Institutions, cooperation, and interdependence.", "module": "M3400-1" },
+      { "_id": "L3400-103", "name": "Constructivism", "description": "The role of norms and identity in international politics.", "module": "M3400-1" }
+    ]
+  },
+  {
+    "_id": "M3400-2",
+    "name": "International Institutions and Law",
+    "description": "The role of the UN, treaties, and international norms.",
+    "course": "3400",
+    "lessons": [
+      { "_id": "L3400-201", "name": "The United Nations", "description": "Structure and function of the UN system.", "module": "M3400-2" },
+      { "_id": "L3400-202", "name": "International Law", "description": "Sources and enforcement of international legal norms.", "module": "M3400-2" },
+      { "_id": "L3400-203", "name": "Human Rights Regimes", "description": "Global human rights frameworks and their limitations.", "module": "M3400-2" }
+    ]
+  },
+  {
+    "_id": "M3400-3",
+    "name": "Global Conflict and Security",
+    "description": "Causes and management of international conflict.",
+    "course": "3400",
+    "lessons": [
+      { "_id": "L3400-301", "name": "Causes of War", "description": "Systemic, state, and individual-level explanations for war.", "module": "M3400-3" },
+      { "_id": "L3400-302", "name": "Nuclear Deterrence", "description": "Nuclear strategy and arms control regimes.", "module": "M3400-3" },
+      { "_id": "L3400-303", "name": "Conflict Resolution", "description": "Diplomacy, mediation, and peacekeeping.", "module": "M3400-3" }
+    ]
+  },
+
+  {
+    "_id": "M2600-1",
+    "name": "Relational Database Fundamentals",
+    "description": "Core concepts of relational databases and SQL.",
+    "course": "2600",
+    "lessons": [
+      { "_id": "L2600-101", "name": "What is a Database?", "description": "Overview of database systems and use cases.", "module": "M2600-1" },
+      { "_id": "L2600-102", "name": "Tables and Schemas", "description": "Designing tables, columns, and data types.", "module": "M2600-1" },
+      { "_id": "L2600-103", "name": "Basic SQL Queries", "description": "Writing SELECT, INSERT, UPDATE, and DELETE statements.", "module": "M2600-1" }
+    ]
+  },
+  {
+    "_id": "M2600-2",
+    "name": "Normalization and ER Modeling",
+    "description": "Designing efficient and well-structured databases.",
+    "course": "2600",
+    "lessons": [
+      { "_id": "L2600-201", "name": "Entity-Relationship Diagrams", "description": "Modeling data using ER diagrams.", "module": "M2600-2" },
+      { "_id": "L2600-202", "name": "Normal Forms", "description": "1NF, 2NF, and 3NF explained with examples.", "module": "M2600-2" },
+      { "_id": "L2600-203", "name": "Keys and Constraints", "description": "Primary keys, foreign keys, and integrity constraints.", "module": "M2600-2" }
+    ]
+  },
+  {
+    "_id": "M2600-3",
+    "name": "Advanced SQL and Transactions",
+    "description": "Complex queries, joins, and transaction management.",
+    "course": "2600",
+    "lessons": [
+      { "_id": "L2600-301", "name": "Joins", "description": "INNER, LEFT, RIGHT, and FULL joins with examples.", "module": "M2600-3" },
+      { "_id": "L2600-302", "name": "Aggregations and Subqueries", "description": "GROUP BY, HAVING, and nested queries.", "module": "M2600-3" },
+      { "_id": "L2600-303", "name": "Transactions and ACID", "description": "Understanding atomicity, consistency, isolation, and durability.", "module": "M2600-3" }
+    ]
+  }
+]
