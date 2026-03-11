@@ -8,7 +8,6 @@ import { LuNotebookPen } from "react-icons/lu";
 import { FaPlus, FaTrash } from "react-icons/fa";
 import { IoSearchOutline } from "react-icons/io5";
 import LessonControlButtons from "../modules/LessonControlButtons";
-import ModuleControlButtons from "../modules/ModuleControlButtons";
 import Link from "next/link";
 import { RootState } from "../../../store";
 import { deleteAssignment } from "./reducer";
@@ -25,8 +24,9 @@ export default function Assignments() {
         [key: string]: any;
       } | null,
   );
-  const { assignments } = useSelector(
-    (state: RootState) => state.assignmentsReducer,
+
+  const assignments = useSelector(
+    (state: RootState) => state.assignmentsReducer.assignments as any[],
   );
 
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
@@ -117,7 +117,7 @@ export default function Assignments() {
               <span className="badge rounded-pill border border-dark me-2">
                 40% of Total
               </span>
-              {isFaculty && <ModuleControlButtons />}
+              {isFaculty && <LessonControlButtons />}
             </div>
           </div>
 
