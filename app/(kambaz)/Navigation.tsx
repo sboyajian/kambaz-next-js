@@ -54,7 +54,7 @@ export default function KambazNavigation() {
         const isActive = pathname.includes(link.path);
         return (
           <ListGroupItem
-            key={link.path}
+            key={link.label}
             as={Link}
             href={link.path}
             className={`text-center border-0
