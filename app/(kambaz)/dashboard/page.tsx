@@ -14,8 +14,13 @@ import * as db from "../database";
 
 export default function Dashboard() {
   const { courses } = useSelector((state: RootState) => state.coursesReducer);
-  const { currentUser } = useSelector(
-    (state: RootState) => state.accountReducer,
+  const currentUser = useSelector(
+    (state: RootState) =>
+      state.accountReducer.currentUser as {
+        _id: string;
+        role: string;
+        [key: string]: any;
+      } | null,
   );
   const { enrollments } = db;
   const dispatch = useDispatch();
