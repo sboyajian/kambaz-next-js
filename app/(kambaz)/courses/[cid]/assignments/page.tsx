@@ -18,8 +18,12 @@ export default function Assignments() {
   const router = useRouter();
   const dispatch = useDispatch();
 
-  const { currentUser } = useSelector(
-    (state: RootState) => state.accountReducer,
+  const currentUser = useSelector(
+    (state: RootState) =>
+      state.accountReducer.currentUser as {
+        role: string;
+        [key: string]: any;
+      } | null,
   );
   const { assignments } = useSelector(
     (state: RootState) => state.assignmentsReducer,

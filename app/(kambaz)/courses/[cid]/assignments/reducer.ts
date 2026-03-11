@@ -2,7 +2,20 @@ import { createSlice } from "@reduxjs/toolkit";
 import { assignments } from "../../../database";
 import { v4 as uuidv4 } from "uuid";
 
-const initialState = {
+type Assignment = {
+  _id: string;
+  course: string;
+  title: string;
+  points: number;
+  dueDate: string;
+  availableDate: string;
+};
+
+type AssignmentsState = {
+  assignments: Assignment[];
+};
+
+const initialState: AssignmentsState = {
   assignments: assignments,
 };
 
