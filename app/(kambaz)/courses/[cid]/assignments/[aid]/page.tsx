@@ -18,15 +18,17 @@ export default function AssignmentEditor() {
     aid !== "new" ? assignments.find((a: any) => a._id === aid) : undefined;
 
   const [assignment, setAssignment] = useState(
-    existing ?? {
-      title: "New Assignment",
-      course: courseId,
-      description: "",
-      points: 100,
-      dueDate: "",
-      availableDate: "",
-      availableUntilDate: "",
-    },
+    existing
+      ? { availableUntilDate: "", ...existing } // ensure field always exists
+      : {
+          title: "New Assignment",
+          course: courseId,
+          description: "",
+          points: 100,
+          dueDate: "",
+          availableDate: "",
+          availableUntilDate: "",
+        },
   );
 
   const isNew = !existing;
