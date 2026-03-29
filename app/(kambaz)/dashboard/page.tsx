@@ -41,8 +41,6 @@ export default function Dashboard() {
     {},
   );
 
-  const isFaculty = currentUser?.role === "FACULTY";
-
   const fetchMyCourses = async () => {
     try {
       const fetchedCourses = await client.findMyCourses();
@@ -211,29 +209,27 @@ export default function Dashboard() {
                       {c.description}
                     </Card.Text>
                     <Button variant="primary">Go</Button>
-                    {isFaculty && (
-                      <>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            onDeleteCourse(c._id);
-                          }}
-                          className="btn btn-danger float-end"
-                        >
-                          Delete
-                        </button>
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setCourse(c);
-                          }}
-                          className="btn btn-warning me-2 float-end"
-                          id="wd-edit-course-click"
-                        >
-                          Edit
-                        </button>
-                      </>
-                    )}
+                    <>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          onDeleteCourse(c._id);
+                        }}
+                        className="btn btn-danger float-end"
+                      >
+                        Delete
+                      </button>
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setCourse(c);
+                        }}
+                        className="btn btn-warning me-2 float-end"
+                        id="wd-edit-course-click"
+                      >
+                        Edit
+                      </button>
+                    </>
                   </Card.Body>
                 </Link>
               </Card>
