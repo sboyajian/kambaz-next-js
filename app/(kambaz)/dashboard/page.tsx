@@ -8,8 +8,8 @@ import Link from "next/link";
 import { Row, Col, Card, Button, FormControl, Modal } from "react-bootstrap";
 import * as client from "../courses/client";
 import {
-  enrollUserInCourse,
-  unenrollUserFromCourse,
+  enrollIntoCourse,
+  unenrollFromCourse,
   fetchAllCourses,
   findMyCourses,
 } from "../courses/client";
@@ -79,9 +79,9 @@ export default function Dashboard() {
     if (!currentUser) return;
 
     if (enrollmentMap[courseId]) {
-      await unenrollUserFromCourse(currentUser._id, courseId);
+      await unenrollFromCourse(currentUser._id, courseId);
     } else {
-      await enrollUserInCourse(currentUser._id, courseId);
+      await enrollIntoCourse(currentUser._id, courseId);
     }
 
     setEnrollmentMap((prev) => ({
@@ -212,11 +212,15 @@ export default function Dashboard() {
                   href={`/courses/${c._id}/home`}
                   className="text-decoration-none text-dark"
                 >
-                  <Card.Img src={c.image} height={160} />
+                  <Card.Img
+                    src={c.image || "/images/reactjs.jpg"}
+                    height={160}
+                  />
+
                   <Card.Body>
                     <Card.Title>{c.name}</Card.Title>
 
-                    <Card.Text style={{ height: "100px" }}>
+                    <Card.Text style={{ height: "100px", overflow: "hidden" }}>
                       {c.description}
                     </Card.Text>
 

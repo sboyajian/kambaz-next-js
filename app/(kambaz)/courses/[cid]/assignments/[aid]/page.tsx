@@ -1,47 +1,44 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { addAssignment, updateAssignment } from "../reducer";
-import { RootState } from "../../../../store";
+import { useState, useEffect } from "react";
+import * as client from "../../../client";
 
 export default function AssignmentEditor() {
   const { cid, aid } = useParams();
   const courseId = Array.isArray(cid) ? cid[0] : (cid as string);
+  const assignmentId = Array.isArray(aid) ? aid[0] : (aid as string);
   const router = useRouter();
-  const dispatch = useDispatch();
 
-  const { assignments } = useSelector(
-    (state: RootState) => state.assignmentsReducer,
-  );
-  const existing =
-    aid !== "new" ? assignments.find((a: any) => a._id === aid) : undefined;
+  const [assignment, setAssignment] = useState<any>({
+    title: "New Assignment",
+    course: courseId,
+    description: "",
+    points: 100,
+    dueDate: "",
+    availableDate: "",
+    availableUntilDate: "",
+  });
 
-  const [assignment, setAssignment] = useState(
-    existing
-      ? { availableUntilDate: "", ...existing } // ensure field always exists
-      : {
-          title: "New Assignment",
-          course: courseId,
-          description: "",
-          points: 100,
-          dueDate: "",
-          availableDate: "",
-          availableUntilDate: "",
-        },
-  );
+  const isNew = assignmentId === "new";
 
-  const isNew = !existing;
+  useEffect(() => {
+    if (!isNew) {
+      // fetch existing assignment from DB
+      client.findAssignmentsForCourse(courseId).then((assignments) => {
+        const existing = assignments.find((a: any) => a._id === assignmentId);
+        if (existing) setAssignment({ availableUntilDate: "", ...existing });
+      });
+    }
+  }, [assignmentId]);
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (isNew) {
-      dispatch(addAssignment({ ...assignment, course: courseId }));
+      await client.createAssignmentForCourse(courseId, assignment);
     } else {
-      dispatch(updateAssignment(assignment));
+      await client.updateAssignment(assignment);
     }
     router.push(`/courses/${courseId}/assignments`);
   };
-
   const handleCancel = () => {
     router.push(`/courses/${courseId}/assignments`);
   };

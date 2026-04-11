@@ -20,14 +20,12 @@ export default function CourseNavigation() {
   return (
     <div id="wd-courses-navigation" className="wd list-group fs-5 rounded-0">
       {links.map((link) => {
-        const href = `/courses/${cid}/${link === "People" ? "people/table" : link.toLowerCase()}`;
+        const href = `/courses/${cid}/${link.toLowerCase()}`;
         const isActive =
           pathname === href ||
           (link === "Home" &&
             !links.some(
-              (l) =>
-                pathname ===
-                `/courses/${cid}/${l === "People" ? "people/table" : l.toLowerCase()}`,
+              (l) => pathname === `/courses/${cid}/${l.toLowerCase()}`,
             ));
         return (
           <Link

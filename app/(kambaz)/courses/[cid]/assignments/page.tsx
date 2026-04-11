@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
 import { ListGroup, ListGroupItem, Modal, Button } from "react-bootstrap";
@@ -10,12 +10,11 @@ import { IoSearchOutline } from "react-icons/io5";
 import LessonControlButtons from "../modules/LessonControlButtons";
 import Link from "next/link";
 import { RootState } from "../../../store";
-import { deleteAssignment } from "./reducer";
+import * as client from "../../client";
 
 export default function Assignments() {
   const { cid } = useParams();
   const router = useRouter();
-  const dispatch = useDispatch();
 
   const currentUser = useSelector(
     (state: RootState) =>
@@ -25,24 +24,30 @@ export default function Assignments() {
       } | null,
   );
 
-  const assignments = useSelector(
-    (state: RootState) => state.assignmentsReducer.assignments as any[],
-  );
-
+  const [assignments, setAssignments] = useState<any[]>([]);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
   const [assignmentToDelete, setAssignmentToDelete] = useState<any>(null);
 
-  const courseAssignments = assignments.filter((a: any) => a.course === cid);
   const isFaculty = currentUser?.role === "FACULTY";
+
+  const fetchAssignments = async () => {
+    const data = await client.findAssignmentsForCourse(cid as string);
+    setAssignments(data);
+  };
+
+  useEffect(() => {
+    fetchAssignments();
+  }, [cid]);
 
   const handleDeleteClick = (assignment: any) => {
     setAssignmentToDelete(assignment);
     setShowDeleteDialog(true);
   };
 
-  const handleConfirmDelete = () => {
+  const handleConfirmDelete = async () => {
     if (assignmentToDelete) {
-      dispatch(deleteAssignment(assignmentToDelete._id));
+      await client.deleteAssignment(cid as string, assignmentToDelete._id);
+      await fetchAssignments();
     }
     setShowDeleteDialog(false);
     setAssignmentToDelete(null);
@@ -122,7 +127,7 @@ export default function Assignments() {
           </div>
 
           <ListGroup className="rounded-0">
-            {courseAssignments.map((assignment: any) => (
+            {assignments.map((assignment: any) => (
               <ListGroupItem
                 key={assignment._id}
                 className="wd-assignment-list-item p-3 ps-1"
