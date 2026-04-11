@@ -10,7 +10,7 @@ import { NavItem, NavLink } from "react-bootstrap";
 export default function AccountNavigation() {
   const { currentUser } = useSelector(
     (state: RootState) => state.accountReducer,
-  );
+  ) as { currentUser: any };
   const links = currentUser ? ["profile"] : ["signin", "signup"];
   const pathname = usePathname();
   return (
